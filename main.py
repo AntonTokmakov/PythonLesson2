@@ -1,16 +1,17 @@
-# This is a sample Python script.
+def inputMas(mas_length):
+    mas = []
+    print("Вводите значение в массив по одному")
+    while mas_length > 0:
+        mas.append(int(input()))
+        mas_length -= 1
+    return mas
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+mas_length1 = int(input("Введите кол-во элементов первого списка: "))
+mas_length2 = int(input("Введите кол-во элементов второго списка: "))
+mas1 = inputMas(mas_length1)
+mas2 = inputMas(mas_length2)
 
+result = sorted({x for x in mas1 if x in mas2})
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print("Итоговый список: ", *result)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
